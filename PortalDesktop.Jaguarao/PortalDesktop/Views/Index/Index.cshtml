@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+
+<head>
+    <meta charset="utf-8" />
+    <title>Cartorio Jagurão</title>
+</head>
+
+<body class="body">
+
+
+    @using (Html.BeginForm("Validar", "Home"))
+    {
+
+  
+
+        <div class="frmlogin">
+            <div class="row">
+                <label>Nome do usuario:</label>
+                <input type="text" class="form-control"  />
+            </div>
+
+            <div class="row">
+                <label>Senha:</label>
+                <input type="password" class="form-control" />
+            </div>
+            <div class="row">
+                <input type="submit" value="Entrar" class="btn-success"  />
+            </div>
+
+
+        </div>
+
+
+
+        
+           
+
+    }
+
+
+
+
+
+
+</body>

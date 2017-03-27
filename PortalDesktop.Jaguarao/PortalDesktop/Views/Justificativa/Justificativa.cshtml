@@ -1,0 +1,122 @@
+﻿
+@{
+    ViewBag.Title = "Justificativa";
+}
+
+
+<head>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="home">
+    <div class="cabeca">
+        <img src="~/img/unnamed.png" width="800" height="150" />
+    </div>
+
+    <div class="barra">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    @using (Html.BeginForm("Redirecionar", "Justificativa"))
+                    {
+
+                        <input type="submit" class="btn-link" value="Inicio" />
+                        <input type="submit" class="btn-link" value="Comprovates" />
+                        <input type="submit" class="btn-link" value="Ferias" />
+                        <input type="submit" class="btn-link" value="Exames" />
+                        <input type="submit" class="btn-link" value="Pops" />
+                        <input type="submit" class="btn-link" value="Justificativas" />
+
+                    }
+                  </div>
+             </div>
+        </nav>
+    </div>
+
+    @using (@Html.BeginForm())
+    {
+        <fieldset>
+            <div class="cor">
+                <div class="justificativa">
+
+                    <div class="row">
+                        <label>Data da Ocorrência</label>
+                        <input type="date" name="data" class="form-control" />
+                    </div>
+                   
+                    <div class="row">
+                        
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                                    Funcionarios....
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                    <li role="presentation"><a role="menuitem" href="#">HTML</a></li>
+                                    <li role="presentation"><a role="menuitem" href="#">CSS</a></li>
+                                    <li role="presentation"><a role="menuitem" href="#">JavaScript</a></li>
+                                    <li role="presentation" class="divider"></li>
+                                    <li role="presentation"><a role="menuitem" href="#">About Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <label>Setor</label>
+                        <input type="text" name="txtcolaboraro" class="form-control" />
+                    </div>
+
+
+                    <div class="row">
+                        <label>Motivo ?</label><br />
+                        <input type="radio" name="Motivo" checked="checked" />Pessoal<br />
+                        <input type="radio" name="Motivo" checked="checked" />Problema técnico no ponto eletronico<br />
+                        <input type="radio" name="Motivo" checked="checked" />Atestado Medico<br />
+                        <input type="radio" name="Motivo" checked="checked" />Serviços Externos<br />
+                        <input type="radio" name="Motivo" checked="checked" />Visita Para Captação de clientes  <br />
+                        <input type="radio" name="Motivo" checked="checked" />Reunião e cursos
+                    </div>
+
+
+                    <div class="row">
+                        <label>Justificativa</label>
+                        <input type="text" name="txtjusti" class="form-control" />
+                    </div>
+
+                    <div class="row">
+                        <label>Abonado ?</label>
+                        <input type="radio" name="simounao" checked="checked" />Sim
+                        <input type="radio" name="simounao" checked="checked" />Não
+
+                    </div>
+
+                    <div class="row">
+                        <label>Arquivo</label>
+                        <input type="text" name="txtcaminhoarquivo" class="form-control" />
+                    </div>
+
+                    <div class="row">
+                        <div class="btnsalvar">
+
+                            <input type="submit" name="btnsalvar" class="btn-primary" />
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </fieldset>
+
+    }
+
+
+
+
+</body>
+
